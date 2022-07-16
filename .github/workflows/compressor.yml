@@ -18,13 +18,13 @@ jobs:
            git config --global user.name ${{ secrets.GitHubName }}
            git config --global user.email ${{ secrets.GitHubMail }}
            git config --global credential.helper store
-           echo "https://srenejr:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+           echo "https://locuraazul:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
            
        
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b main https://srenejr:${{ secrets.GH_TOKEN }}@github.com/srenejr/encoder.git
+           git clone -b main https://locuraazul:${{ secrets.GH_TOKEN }}@github.com/locuraazul/encoder.git
        - name: Running Bot 
          timeout-minutes: 350
          continue-on-error: true
